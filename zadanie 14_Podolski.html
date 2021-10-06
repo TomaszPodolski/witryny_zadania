@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zadanie 14</title>
+       <!--Autor : Tomasz Podolski 2P Grupa 2-->
+     
+    </head>
+    <body>
+        <div style="color: brown; font-size: 40px;">
+            <script>
+              var No_Pod=prompt("Podaj N0 = ", "");
+            var t_Pod=prompt("Podaj t = ", ""); 
+        var T1_2_Pod=prompt("Podaj T1/2 = ", "");
+
+               			 var lambda = Math.LN2/T1_2_Pod;
+               	 lambda = lambda.toFixed(7);
+               		 var potega = (-1 * lambda) * t_Pod;
+               	 var n = No_Pod * Math.pow(Math.E, potega); 
+         	       n = n.toFixed(7);
+                document.write("N0 = "+No_Pod+"[sztuk] <br>");      
+                document.write("t = "+t_Pod+"[lat] <br>");
+                document.write("T1/2 = "+T1_2_Pod+"[lat] <br>");
+                document.write("Lambda = "+lambda+"[1/rok] <br>");
+                document.write("N = "+n+"[sztuk] <br>");
+            </script>
+        </div>
+      
+    </body>
+</html>
+

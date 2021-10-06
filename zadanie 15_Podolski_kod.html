@@ -1,0 +1,39 @@
+<html>
+<body>
+<textarea rows="36" cols="110">
+ <html>
+            <body>
+            <div style="color:green;font-size:35px;">
+            <script language="JavaScript">
+                var liczba1=prompt("liczba1=","");
+                var liczba2=prompt("liczba2=","");
+                
+                var x1_Podo = parseFloat(liczba1);
+                var x2_Podo = parseFloat(liczba2);
+                
+                var x1 = parseFloat(3*Math.pow(x1_Podo, (6/(6+2))));
+               
+	 var x2 = parseFloat(2*Math.cos(x1_Podo * Math.PI / 180) + 2*Math.sin(x1_Podo * Math.PI / 180));
+                
+	     var xa = Math.cbrt(Math.pow(x1_Podo,5) + (2 * Math.pow(x2_Podo,4)));
+             
+		   var xq = Math.abs(x1_Podo - x2_Podo)
+                 
+ 	var x3 = xa * xq;	
+        
+	        document.write("x1 = " +x1_Podo + "<br>");
+        
+        document.write("x2 = " +x2_Podo + "<br>");
+
+	                document.write(x1 + "<br>");
+        
+	        document.write(x2 + "<br>");
+        
+        document.write(x3 + "<br>");
+            </script>
+            </div>
+            </body>
+            </html>
+</textarea>
+</html>
+</body>
