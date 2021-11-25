@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>
+Zadanie 78
+
+</title>
+
+
+
+    <script language="JavaScript">
+var R1 =2.01;
+var R2 =4.5;
+var R3 =120;
+var R4 =1020;
+var licznik1=0;
+var licznik2=0;
+var licznik3=0;
+var licznik4=0;
+for ( var i=-Math.round(R1)-1; i<=Math.round(R1)+1; i++)
+{
+	for ( var j=-R1; j<=R1; j++)
+	{
+	d=Math.sqrt(i*i+j*j);		
+	
+	if(d<=R1) 
+{
+licznik1++;
+}
+}
+
+}
+document.write("licznik="+licznik1+"<br>");
+
+
+
+
+
+
+
+for ( var i=-Math.round(R2)-1; i<=Math.round(R2)+1; i++)
+{
+	for ( var j=-R2; j<=R2; j++)
+	{
+	d=Math.sqrt(i*i+j*j);		
+	
+	if(d<=R2) 
+{
+licznik2++;
+}
+}
+
+}
+document.write("licznik="+licznik2+"<br>");
+
+
+
+
+for ( var i=-Math.round(R3)-1; i<=Math.round(R3)+1; i++)
+{
+	for ( var j=-R3; j<=R3; j++)
+	{
+	d=Math.sqrt(i*i+j*j);		
+	
+	if(d<=R3) 
+{
+licznik3++;
+}
+}
+
+}
+document.write("licznik="+licznik3+"<br>");
+
+
+
+
+
+
+for ( var i=-Math.round(R4)-1; i<=Math.round(R4)+1; i++)
+{
+	for ( var j=-R4; j<=R4; j++)
+	{
+	d=Math.sqrt(i*i+j*j);		
+	
+	if(d<=R4) 
+{
+licznik4++;
+}
+}
+
+}
+document.write("licznik="+licznik4+"<br>");
+
+
+    </script>
+</head>
+<body>
+<style> 
+
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+#head {
+    width:100%;
+    text-align:center;
+    font-size: 0,5cm;
+    font-weight: bold;
+}
+
+body {
+    background-size: cover;
+    background-image: url("kot.jpg");
+    margin:auto;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+  
+}
+
+
+
+td, th {
+    border: 1px solid black;
+}
+</style>
+
+<table>
+
+ <tr> <td colspan="20" id="head">zadanie 78</td> </tr>
+ <tr> 
+<td>
+2.01
+</td>
+<th>
+<script>document.write(licznik1);</script>
+</th>
+</body>
+</html>
