@@ -1,100 +1,77 @@
 <html>
+    <head>
+ <meta charset="UTF-8">
+ </head>
+<body>
+    <div style="color:red;font-size:50px;">
 
-<head>
-    <title>
-Zadanie 78
+ <table style="width:auto;text-align:center;">
+  <tr>
+    <th>promień koła r</th>
+ 
+   <th>liczba punktów n(r)</th>
 
-</title>
+	  </tr>
+
+	  <tr>
+
+		    <td>2.01</td>
+
+			    <td id="t1"></td>
+
+	  </tr>
+
+	  <tr>
+
+	    <td>4.5</td>
+		    <td id="t2"></td>
 
 
-
-    <script language="JavaScript">
-var R1 =2.01;
-var R2 =4.5;
-var R3 =120;
-var R4 =1020;
-var licznik1=0;
-var licznik2=0;
-var licznik3=0;
-var licznik4=0;
-for ( var i=-Math.round(R1)-1; i<=Math.round(R1)+1; i++)
-{
-	for ( var j=-R1; j<=R1; j++)
-	{
-	d=Math.sqrt(i*i+j*j);		
+		  </tr>
+	    <tr>
+    
+	<td>120</td>
 	
-	if(d<=R1) 
-{
-licznik1++;
-}
-}
+	    <td id="t3"></td>
 
-}
-document.write("licznik="+licznik1+"<br>");
+	        <tr>
 
+	    <td>1020</td>
+   
+	 <td id="t4"></td>
 
+	  </tr>
 
+		</table> <script language="JavaScript">
 
+	var r1 = 2.01;
 
+		var r2 = 4.5;
 
+			var r3 = 120;
 
-for ( var i=-Math.round(R2)-1; i<=Math.round(R2)+1; i++)
-{
-	for ( var j=-R2; j<=R2; j++)
-	{
-	d=Math.sqrt(i*i+j*j);		
-	
-	if(d<=R2) 
-{
-licznik2++;
-}
-}
+		var r4 = 1020;
+ 
+			var r;
 
-}
-document.write("licznik="+licznik2+"<br>");
+		 for(var i=1;i<=4;i++){
 
+		 if(i==1){r=r1}
+	 else if(i==2){r=r2}
 
+	 else if(i==3){r=r3}
+		 else if(i==4){r=r4};
 
-
-for ( var i=-Math.round(R3)-1; i<=Math.round(R3)+1; i++)
-{
-	for ( var j=-R3; j<=R3; j++)
-	{
-	d=Math.sqrt(i*i+j*j);		
-	
-	if(d<=R3) 
-{
-licznik3++;
-}
-}
-
-}
-document.write("licznik="+licznik3+"<br>");
-
-
-
-
-
-
-for ( var i=-Math.round(R4)-1; i<=Math.round(R4)+1; i++)
-{
-	for ( var j=-R4; j<=R4; j++)
-	{
-	d=Math.sqrt(i*i+j*j);		
-	
-	if(d<=R4) 
-{
-licznik4++;
-}
-}
-
-}
-document.write("licznik="+licznik4+"<br>");
-
-
+			var licznik=0;
+for(var y=-Math.round(r)-1; y<=Math.round(r)+1;y++){
+for(var x=-Math.round(r)-1; x<=Math.round(r)+1;x++){
+d=Math.sqrt(y*y+x*x);
+if(d<=r){licznik++};
+}}
+document.getElementById("t"+i).innerHTML = "licznik = "+licznik;}
     </script>
 </head>
-<body>
+
 <style> 
 
 table {
@@ -119,7 +96,6 @@ body {
 }
 
 
-
 td, th {
     border: 1px solid black;
 }
@@ -127,13 +103,10 @@ td, th {
 
 <table>
 
- <tr> <td colspan="20" id="head">zadanie 78</td> </tr>
- <tr> 
-<td>
-2.01
-</td>
-<th>
-<script>document.write(licznik1);</script>
-</th>
+ 
+ 
+
+
+
 </body>
 </html>

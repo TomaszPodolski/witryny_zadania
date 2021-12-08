@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script language="JavaScript">
+
+		var Pod1 = prompt("liczba 1 (przedzial: <20,60>) ");
+
+		var Pod2 = prompt("liczba 2 (przedzial: <20,60>) ");
+
+		var Pod3 = prompt("wielkosc tekstu na poczatku");
+
+		var Pod4 = prompt("Wyswietlany tekst");
+	
+
+	if(Pod1>Pod2){
+		 for(a=1;a<=20+Pod3;a++){
+			document.write("<p style=\"font-size:"+a*5+"px; color: black;\"><br>"+Pod4+"<br></p>");
+
+ }
+}
+	if(Pod2>Pod1){
+		
+		 for(a=60;a<=10+Pod3;a--){
+			document.write("<p style=\"font-size:"+a*5+"px; color: black;\"><br>"+Pod4+"<br></p>");
+		if(Pod2<0) {
+		document.write("koniec drogi misiek");
+}
+
+		 }
+		}	
+	else {
+	
+	document.write("Error");
+ }
+			</script>
+		</div>
+	</body>
+</html>
