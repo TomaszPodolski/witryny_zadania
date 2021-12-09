@@ -1,0 +1,120 @@
+<html>
+  <head> 
+ <script type="text/javascript"> 
+   
+	var a_Pod=prompt("podaj a","");
+	
+	var b_Pod=prompt("podaj b","");
+
+	var c_Pod=prompt("podaj c","");
+			
+	
+	
+	
+
+	var delta=  parseFloat(b_Pod*b_Pod-(4*a_Pod*c_Pod));
+	var p_Pod= parseFloat(-b_Pod/(2*a_Pod));
+	var q_Pod= parseFloat(-delta/(4*a_Pod));
+	var pierw_Pod = parseFloat(Math.sqrt(delta));
+	var x1_Pod= parseFloat((-b_Pod-pierw_Pod)/(2*a_Pod));
+	var x2_Pod= parseFloat((-b_Pod+pierw_Pod)/(2*a_Pod));
+	delta.toFixed(2);
+	x1_Pod.toFixed(2);
+	
+	
+	document.write("a wynosi: " +a_Pod + "<br>");
+	document.write("b wynosi: " +b_Pod + "<br>");
+	document.write("c wynosi: " +c_Pod + "<br>");
+	document.write("delta wynosi: " +delta.toFixed(2)+ "<br>");
+	document.write("x1 wynosi: " +x1_Pod.toFixed(2) + "<br>");
+	document.write("x2 wynosi: " +x2_Pod.toFixed(2) + "<br>");
+	document.write("pierwiastek z delty wynosi: " +pierw_Pod.toFixed(2) + "<br>");
+	
+	if(b_Pod>0)
+	{
+	
+	document.write("postac ogolna wynosi " +a_Pod+ "x^2 +" +b_Pod+ "x + " +c_Pod+"<br>"); 	
+	
+	}
+
+	else if(b_Pod,c_Pod<0)
+	{
+	
+	document.write("postac ogolna wynosi " +a_Pod+ "x^2 " +b_Pod+ "x  " +c_Pod+"<br>"); 	
+	
+	}
+
+
+	else if(b_Pod<0)
+	{
+	
+	document.write("postac ogolna wynosi " +a_Pod+ "x^2 " +b_Pod+ "x + " +c_Pod+"<br>"); 	
+	
+	}	
+	
+	else if(c_Pod<0)
+	{
+	
+	document.write("postac ogolna wynosi " +a_Pod+ "x^2 " +b_Pod+ "x  " +c_Pod+"<br>"); 	
+	
+	}	
+
+	
+
+	if(p_Pod, q_Pod>0)
+	{	
+	document.write("postac kanoniczna wynosi " +a_Pod+ "(x-"+p_Pod.toFixed(2)+ ")^2 +" +q_Pod.toFixed(2)+"<br>");  
+	}
+	
+	else if(p_Pod<0)
+	{
+	document.write("postac kanoniczna wynosi " +a_Pod+ "(x+"+p_Pod.toFixed(2)+ ")^2 +" +q_Pod.toFixed(2)+"<br>");  
+	}
+ 
+	
+	else if(q_Pod<0)
+	{
+	document.write("postac kanoniczna wynosi " +a_Pod+ "(x+"+p_Pod.toFixed(2)+ ")^2 " +q_Pod.toFixed(2)+"<br>");  
+	}
+ 	
+	else
+	{
+		document.write("postac kanoniczna wynosi " +a_Pod+ "(x"+p_Pod.toFixed(2)+ ")^2 +" +q_Pod.toFixed(2)+"<br>");  
+	}
+
+
+
+	if(delta<0)
+	{
+	document.write("brak postaci iloczynowej");
+	}
+
+	else if (x1_Pod,x2_Pod>0)
+	{
+	document.write("postac iloczynowa wynosi " +a_Pod+ "(x- " +x1_Pod.toFixed(2)+ ")(x- " +x2_Pod.toFixed(2)+")<br>");
+	}
+	
+	else if (x1_Pod<0)
+	{
+	document.write("postac iloczynowa wynosi " +a_Pod+ "(x+ " +x1_Pod.toFixed(2)+ ")(x- " +x2_Pod.toFixed(2)+")<br>");
+	}
+	
+	else if (x2_Pod<0)
+	{
+document.write("postac iloczynowa wynosi " +a_Pod+ "(x- " +Math.abs(x1_Pod.toFixed(2))+ ")(x+ " +Math.abs(x2_Pod.toFixed(2))+")<br>");
+	}
+	
+
+	else if(q_Pod<0)
+	{
+	document.write("postac iloczynowa wynosi " +a_Pod+ "(x-" +x1_Pod.toFixed(2)+ ")(x- " +x2_Pod.toFixed(2)+")<br>");  
+	}
+	
+
+	
+				</script> 
+			 </head> 
+		  <body>   
+
+ 	 </body> 
+ </html> 
