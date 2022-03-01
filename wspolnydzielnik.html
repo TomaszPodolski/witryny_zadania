@@ -1,0 +1,38 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+		<H1> Najwiekszy wspolmy dzielnik </H1>
+<h4> podaj liczbe <h4>
+ <input type = "number"  id = "liczba1"> <br> <br>
+<input type = "number"  id = "liczba2">
+	<input type = "button" value = "pokaz"	onclick= "pokaz()">
+<p id = "wynik" </p>
+
+</body>
+<script>
+const pokaz=()=>{
+let a = parseInt(liczba1.value);
+let b = parseInt(liczba2.value);
+
+while(a!=b)
+{
+if(a>b)
+{
+ a = a - b;
+}
+else if(b>a)
+{
+ b = b - a;
+}
+
+
+
+
+}
+wynik.innerHTML= "dzielnik "+a;
+}
+</script>
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+		<H1> silnia <H2>
+<h5> podaj liczbe <h5> <input type = "number"  id = "liczba">
+	<input type = "button" value = "oblicz"	onclick= "oblicz()">
+<p id = "wynik" </p>
+
+</body>
+<script>
+const oblicz=()=>{
+const n = parseInt(liczba.value);
+let sil = 1;
+for (let i = 1; i <= n ; i++)
+{
+sil *= i;
+}
+wynik.innerHTML= "silnia wynosi "+sil;
+}
+</script>
+</HTML>

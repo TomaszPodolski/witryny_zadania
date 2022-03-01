@@ -1,0 +1,36 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+		<H1> podzielniki </H1>
+<h4> podaj liczbe <h4> <input type = "number"  id = "liczba">
+	<input type = "button" value = "pokaz"	onclick= "pokaz()">
+<p id = "wynik" </p>
+
+</body>
+<script>
+const pokaz=()=>{
+const n = parseInt(liczba.value);
+let i = 1;
+let temp ="";
+while (i<=n)
+{
+if(n%i==0)
+{
+temp+=i+" , ";
+}
+i++
+
+
+
+
+
+}
+wynik.innerHTML= "podzielniki "+temp;
+}
+</script>
+
+
+</HTML>
