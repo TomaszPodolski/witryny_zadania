@@ -1,0 +1,49 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+		<H1> Liczby losowe </H1>
+
+ 
+
+	<input type = "button" value = "Zgadnij" onclick= "pokaz()">
+<p id = "wynik" </p>
+
+</body>
+
+
+<script>
+const pokaz=()=>{
+const los = Math.floor(Math.random()*100)+1;
+let licznik = 0;
+let liczba;
+
+
+do {
+liczba = parseInt(prompt("Podaj liczbe"));
+licznik++;
+if(liczba < los) {
+window.alert("Liczba jest za mala");
+}
+
+else if (liczba > los) {
+window.alert ("Liczba jest za duza");
+}
+
+else if (liczba == los) {
+window.alert ("Brawo! Zgadles");
+}
+
+
+
+
+}
+while ( los!=liczba);
+wynik.innerHTML= "Ilosc prob: "+licznik;
+}
+
+</script>
+
+</html>

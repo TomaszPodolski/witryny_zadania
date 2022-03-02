@@ -1,0 +1,49 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+		<H1> Tabliczka mnozenia </H1>
+
+ 
+
+	<input type = "button" value = "pokaz" onclick= "pokaz()">
+<p id = "wynik1" </p>
+<style>\
+th{background:#000;
+  color:#fff;
+}
+table,th,td{
+border:1px solid #000;
+}
+</style>
+</body>
+<script>
+const pokaz=()=>{
+
+let temp="<table>";
+temp+="<tr>";
+temp+="<th></th>";
+	for(i = 1; i <=10; i++)
+{ 
+	temp+=`<th>${i}</th>`;
+}
+	for(j = 1; j <=10; j++)
+{
+temp+="<tr>";
+}
+	for(k = 1; k <= 10; k++)
+{
+	temp+=`<td>${i*j}</th>`;
+}
+temp+="</tr>";
+		
+	
+
+temp+="</table>";
+
+}
+
+</script>
+</html>
