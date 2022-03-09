@@ -1,0 +1,46 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+	<input type = "button" value = "Znajdz i zamien" onclick= "pokaz1()">
+	<input type = "button" value = "Wielkie litery" onclick= "pokaz2()">
+	<input type = "button" value = "Male litery" onclick= "pokaz3()">
+	
+	<p id = "wynik1" </p>
+
+<textarea id ="pole" cols = "70" rows = "20">
+
+Historia to super przedmiot i napewno dobrze mi pojdzie na sprawdzianie :))))))))))))))))
+
+</textarea>
+
+</body>
+
+
+<script>
+const pokaz1=()=>
+{
+let tekst = pole.value;
+const szukana = prompt("Podaj szukana");
+const zmiana = prompt("Na co zmienic?");
+tekst = tekst.replaceAll(szukana, zmiana);
+pole.value = tekst;
+}
+
+const pokaz2=()=>
+{
+let tekst = pole.value;
+tekst = tekst.toUpperCase();
+pole.value = tekst;
+}
+
+const pokaz3=()=>
+{
+let tekst = pole.value;
+tekst = tekst.toLowerCase();
+pole.value = tekst;
+}
+</script>
+</html>

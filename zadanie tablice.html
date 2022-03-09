@@ -1,0 +1,69 @@
+<HTML>
+<head> 
+ 
+</head>
+<body>
+
+	
+
+	
+	<p id = "wynik1" </p>
+
+<fieldset>
+<legend> przedzial losowania </legend>
+a = <input id = "poleA">
+b = <input id = "poleB">
+</fieldset>
+podaj ilosc elementow tablicy
+<input id = "poleN">
+<input type = "button" value = "generowanie tablicy" onclick= "tablica()">
+<input type = "button" value = "max i min" onclick= "maxmin()">
+<p id = "wynik"> </p>
+
+
+</body>
+
+
+<script>
+
+
+let T = [];
+const tablica=()=>
+{
+const n = parseInt(poleN.value);
+const a = parseInt(poleA.value);
+const b = parseInt(poleB.value);
+for ( let i = 0 ; i < n ; i++)
+	{
+	T[i] = Math.floor(Math.random()*(b-a) + a)+1;
+}
+wyswietl();
+}
+const wyswietl=()=>
+{
+const str = T.join(" , ");
+wynik.innerHTML = str;
+}
+const maxmin =()=>
+{
+let max = T[0];
+let min = T[0];
+for ( let x of T)
+{
+	if ( x > max )
+	
+		max = x;
+	
+
+	if ( x < min )
+	
+		min = x;
+	
+
+}
+}
+wynik.innerHTML = "Max =" +max+ " Min = " +min;
+
+
+</script>
+</html>
