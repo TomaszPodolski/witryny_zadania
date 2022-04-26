@@ -1,0 +1,158 @@
+<html>
+    <head>
+    </head>
+
+    <style type='text/css'>
+        fieldset {
+         
+          width: 1500px;
+          float: left;
+        }
+        #field1 {
+            width: 70%;
+        }
+        #field2 {
+            width: 30%;
+        }
+
+        label {
+          float:left;
+          font-weight:bold;
+        }
+          legend {
+              text-align: center;
+          }
+        
+      
+        
+       
+        
+        </style>
+    <body>
+        
+        <center>
+        <fieldset>
+            <legend> Wybierz wariant zakupu </legend>
+            Cena Auta 
+            <input type="radio" id="RB1" name="RB">
+            Cena Auta z dodatkami
+            <input type="radio" id="RB2" name="RB">
+            Cena Auta z dodatkami i ubezpieczeniem
+            <input type="radio" id="ubezpieczenie" name="RB">
+
+        </fieldset>
+    </center>
+    <br> <br>
+    <br> <br>
+    
+
+        <fieldset style = width:300px; margin:auto;>
+           
+            <legend> Nowe Auto </legend>
+            Model Auta 
+            <input type="text" id="model" name="RB"> 
+            Cena(EURO)
+            <input type="text" id="cena" name="RB">
+            Kurs Euro
+           
+            <input type="text" id="kurs" name="RB">
+            
+
+        </fieldset>
+
+        <fieldset style = width:300px; margin:center;>
+            <legend> Dodatki </legend>
+            Alarm
+            <input type="text" id="Alarm" name="RB">
+            Klimatyzacja
+            <input type="text" id="Klimatyzacja" name="RB">
+            Radioodtwarzacz
+            <input type="text" id="Radioodtwarzacz" name="RB">
+            
+
+        </fieldset>
+        
+
+        <fieldset style = width:400px; margin:auto;>
+            <legend> Ubiezpieczenie </legend>
+            Pierwsze Auto 
+            <input type="checkbox" id="RbNat" name="RB"> <br> <br>
+            Ilosc Lat
+
+            <input type="text" id="RbRez" name="RB">
+           
+        </fieldset>
+
+<br> <br>
+<br> <br>
+<br> <br>
+<br> <br>
+        <input type="button" value="oblicz" onclick="oblicz()">
+        <p id ="wynik1"> </p>
+        <p id ="wynik2"> </p>
+
+    </body>
+
+
+    <script>
+     class NoweAuto{
+         #modelAuta;
+         #cenaAuta;
+         #kursEuro;
+         get model() {return this.#modelAuta;};
+         set model(value){this.#modelAuta=value;};
+         get cena() {return this.#cenaAuta;};
+         set cena(value){this.#cenaAuta=value;};
+         get kurs() {return this.#kursEuro;};
+         set kurs(value){this.#kursEuro=value;};
+         constructor(cena, kurs){
+             this.#cenaAuta = cena;
+             this.#kursEuro = kurs;
+         }
+         obliczCene()
+         {
+             return this.cena * this.kurs;
+         }
+     }
+     const oblicz =()=>{
+         if ( RB1.ckecked)
+         {
+             let model = txtModel.value;
+             let Cena = parseFloat(txtCena.value);
+             let Kurs = parseFloat(txtKurs.value);
+             let Auto = new NoweAuto (Cena, Kurs);
+             wynik1.innerHTML = Model+"Cena Auta";
+             wynik2.innerHTML = Auto.obliczCene();
+
+         }
+     }
+     class AutoZdodatkami extends NoweAuto{
+         #Klima;
+         #Alarm;
+         #Radio;
+         constructor(cena, kurs, klima, alarm, radio)
+         {
+             super(cena,kurs); //wywolanie konstruktora klasy bazowej
+             this.#Klima = klima;
+             this.#Alarm = alarm;
+             this.#Radio = radio;
+
+         }
+         obliczCene()
+         {
+             return super.obliczCene()+this.#Klima + this.#Alarm + this.#Radio;
+         }
+
+     }
+     if(RB2.checked)
+     {
+         let AutoPlus = new AutoZdodatkami(cena, kurs, klima, alarm, radio);
+         let Cena = parseFloat(txtCena.value);
+         let Kurs = parseFloat(txtKurs.value);
+         
+     }
+
+
+
+        </script>
+</html>
